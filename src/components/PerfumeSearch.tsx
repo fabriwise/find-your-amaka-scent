@@ -242,7 +242,7 @@ export const PerfumeSearch = () => {
             value={query}
             onChange={(e) => { setQuery(e.target.value); setOpen(true); setSelected(null); }}
             onFocus={() => setOpen(true)}
-            onBlur={() => setTimeout(() => setOpen(false), 500)}
+            onBlur={() => {}}
             onKeyDown={onKey}
             placeholder="Ex: 212 Vip, Acqua di Gio, Alien…"
             className="w-full pl-14 pr-12 py-5 bg-card border border-border rounded-sm text-base md:text-lg font-light placeholder:text-muted-foreground/60 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all shadow-soft"
