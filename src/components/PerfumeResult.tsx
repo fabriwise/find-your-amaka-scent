@@ -1,4 +1,4 @@
-import { ArrowRight, RotateCcw } from "lucide-react";
+import { ArrowRight, RotateCcw, ExternalLink } from "lucide-react";
 import type { Perfume } from "@/data/perfumes";
 
 interface Props {
@@ -35,9 +35,36 @@ export const PerfumeResult = ({ perfume, onReset }: Props) => {
               <ArrowRight className="h-5 w-5" />
               <span className="text-xs uppercase tracking-[0.25em]">É a versão de</span>
             </div>
-            <h2 className="font-display text-5xl md:text-6xl font-semibold gold-text leading-none">
-              {perfume.amakha}
-            </h2>
+            {perfume.link ? (
+              <a
+                href={perfume.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-3 font-display text-5xl md:text-6xl font-semibold gold-text leading-none hover:opacity-90 transition-opacity"
+              >
+                <span className="border-b-2 border-transparent group-hover:border-gold-soft/60 transition-colors">
+                  {perfume.amakha}
+                </span>
+                <ExternalLink className="h-6 w-6 md:h-7 md:w-7 text-gold-soft opacity-80 group-hover:opacity-100" />
+              </a>
+            ) : (
+              <h2 className="font-display text-5xl md:text-6xl font-semibold gold-text leading-none">
+                {perfume.amakha}
+              </h2>
+            )}
+            {perfume.link && (
+              <div className="mt-5">
+                <a
+                  href={perfume.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-soft/10 border border-gold-soft/40 text-gold-soft hover:bg-gold-soft/20 hover:text-primary-foreground transition-colors text-xs uppercase tracking-[0.3em] rounded-sm"
+                >
+                  Ver página do perfume
+                  <ExternalLink className="h-3.5 w-3.5" />
+                </a>
+              </div>
+            )}
           </div>
           <div className="text-right space-y-1">
             <div className="text-[10px] uppercase tracking-[0.3em] text-gold-soft/80">{perfume.genero}</div>
