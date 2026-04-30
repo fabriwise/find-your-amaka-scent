@@ -105,14 +105,14 @@ function score(query: string, perfume: Perfume): number {
   // Boosts diretos
   if (target === q) return 10000;
   if (target.startsWith(q + " ") || target === q) return 5000;
-  if (target.includes(" " + q + " ") || target.startsWith(q)) return 3000;
+  if (target.includes(" " + q + " ") || target.startsWith(q) || target.endsWith(" " + q)) return 3000;
 
   // Uma palavra digitada deve encontrar essa palavra em qualquer posição do nome
   // Ex: "Girl" encontra "Very Good Girl", "Good Girl" e "Poison Girl".
   if (meaningful.length === 1) {
     const qt = meaningful[0];
     if (tTokens.includes(qt)) return 2500 + Math.max(0, 80 - target.length);
-    if (qt.length >= 3 && tTokens.some(tt => tt.includes(qt) || qt.includes(tt))) return 1800;
+    if (qt.length >= 3 && tTokens.some(tt => tt.includes(qt))) return 1800;
   }
 
   // Match por tokens com fuzzy
