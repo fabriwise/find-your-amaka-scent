@@ -15,7 +15,7 @@ export type Perfume = {
 
 export const perfumes: Perfume[] = [
   {
-    "inspiracao": "1 Million - Paco Rabanne",
+    "inspiracao": "One Million - Paco Rabanne",
     "amakha": "FORTUNE",
     "genero": "MASCULINO",
     "familia": "Amadeirado Especiado",
