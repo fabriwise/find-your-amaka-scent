@@ -269,7 +269,7 @@ export const PerfumeSearch = () => {
               {matches.map((p, i) => (
                 <li key={p.inspiracao + p.amakha}>
                   <button
-                    onMouseDown={(e) => { e.preventDefault(); choose(p); }}
+                    onClick={() => choose(p)}
                     onMouseEnter={() => setHighlight(i)}
                     className={`w-full text-left px-5 py-3 flex items-center justify-between gap-4 transition-colors ${
                       i === highlight ? "bg-accent/15" : "hover:bg-muted/60"
