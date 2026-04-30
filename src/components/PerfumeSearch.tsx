@@ -261,7 +261,7 @@ export const PerfumeSearch = () => {
         </div>
 
         {open && matches.length > 0 && !selected && (
-          <div className="absolute z-20 mt-2 w-full bg-popover border border-border rounded-sm shadow-luxe animate-fade-in">
+          <div className="absolute z-[9999] mt-2 w-full bg-popover border border-border rounded-sm shadow-luxe animate-fade-in">
             <div className="px-5 py-3 text-xs uppercase tracking-[0.2em] text-muted-foreground border-b border-border bg-muted/40">
               {matches.length === 1 ? "1 inspiração encontrada" : `${matches.length} inspirações encontradas — escolha uma`}
             </div>
