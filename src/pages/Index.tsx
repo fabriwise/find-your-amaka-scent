@@ -27,7 +27,7 @@ const Index = () => {
           </h1>
         </div>
 
-        <div className="animate-float-up w-full" style={{ animationDelay: "0.2s" }}>
+        <div>
           <PerfumeSearch />
         </div>
       </section>
