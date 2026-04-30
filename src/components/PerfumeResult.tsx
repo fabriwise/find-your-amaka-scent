@@ -33,31 +33,15 @@ export const PerfumeResult = ({ perfume, onReset }: Props) => {
             </h3>
             <div className="flex items-center gap-3 text-gold-soft mb-3">
               <ArrowRight className="h-5 w-5" />
-              <span className="text-xs uppercase tracking-[0.25em]">É a versão de</span>
+              <span className="text-xs uppercase tracking-[0.25em]">O seu perfume Amakha é o</span>
             </div>
-            {perfume.link ? (
-              <a
-                href={perfume.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-3 font-display text-5xl md:text-6xl font-semibold gold-text leading-none hover:opacity-90 transition-opacity"
-              >
-                <span className="border-b-2 border-transparent group-hover:border-gold-soft/60 transition-colors">
-                  {perfume.amakha}
-                </span>
-                <ExternalLink className="h-6 w-6 md:h-7 md:w-7 text-gold-soft opacity-80 group-hover:opacity-100" />
-              </a>
-            ) : (
-              <h2 className="font-display text-5xl md:text-6xl font-semibold gold-text leading-none">
-                {perfume.amakha}
-              </h2>
-            )}
+            <h2 className="font-display text-5xl md:text-6xl font-semibold gold-text leading-none">
+              {perfume.amakha}
+            </h2>
             {perfume.link && (
               <div className="mt-5">
                 <a
                   href={perfume.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-2.5 bg-gold-soft/10 border border-gold-soft/40 text-gold-soft hover:bg-gold-soft/20 hover:text-primary-foreground transition-colors text-xs uppercase tracking-[0.3em] rounded-sm"
                 >
                   Ver página do perfume
