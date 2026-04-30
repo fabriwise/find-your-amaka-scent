@@ -53,12 +53,14 @@ function lev(a: string, b: string): number {
   return prev[n];
 }
 
-// Tolerância em função do tamanho do token: 4-5 chars => 1 erro, 6-8 => 2, >8 => 3
+// Tolerância em função do tamanho do token (mais permissiva)
+// 3 chars => 1 erro, 4-5 => 2, 6-8 => 3, >8 => 4
 function maxErrors(len: number): number {
-  if (len <= 3) return 0;
-  if (len <= 5) return 1;
-  if (len <= 8) return 2;
-  return 3;
+  if (len <= 2) return 0;
+  if (len <= 3) return 1;
+  if (len <= 5) return 2;
+  if (len <= 8) return 3;
+  return 4;
 }
 
 // Pontua um token da query contra os tokens do alvo (retorna melhor pontuação)
@@ -72,11 +74,10 @@ function tokenScore(qt: string, tTokens: string[]): number {
     // fuzzy: comparar com o token inteiro (mais tolerante)
     if (qt.length >= 3) {
       const tol = maxErrors(Math.max(qt.length, tt.length));
-      // diferença de tamanho não pode exceder a tolerância
       if (Math.abs(tt.length - qt.length) <= tol) {
         const d = lev(qt, tt);
         if (d <= tol) {
-          best = Math.max(best, 75 - d * 10);
+          best = Math.max(best, 78 - d * 8);
           continue;
         }
       }
@@ -85,7 +86,19 @@ function tokenScore(qt: string, tTokens: string[]): number {
         const slice = tt.slice(0, qt.length);
         const d = lev(qt, slice);
         if (d <= maxErrors(qt.length)) {
-          best = Math.max(best, 65 - d * 10);
+          best = Math.max(best, 68 - d * 8);
+        }
+      }
+      // fuzzy substring: procurar a melhor janela do tamanho da query dentro do token
+      if (tt.length > qt.length + 1) {
+        const tol = maxErrors(qt.length);
+        for (let i = 0; i <= tt.length - qt.length; i++) {
+          const slice = tt.slice(i, i + qt.length);
+          const d = lev(qt, slice);
+          if (d <= tol) {
+            best = Math.max(best, 60 - d * 8);
+            break;
+          }
         }
       }
     }
@@ -106,6 +119,21 @@ function score(query: string, perfume: Perfume): number {
   if (target === q) return 10000;
   if (target.startsWith(q + " ") || target === q) return 5000;
   if (target.includes(" " + q + " ") || target.startsWith(q) || target.endsWith(" " + q)) return 3000;
+
+  // Fuzzy sobre o nome inteiro sem espaços (ex.: "milhon" ~ "onemillion")
+  const qJoined = q.replace(/\s+/g, "");
+  const tJoined = target.replace(/\s+/g, "");
+  if (qJoined.length >= 4 && tJoined.length >= qJoined.length) {
+    const tol = maxErrors(qJoined.length);
+    // tenta como substring fuzzy dentro do alvo
+    for (let i = 0; i <= tJoined.length - qJoined.length; i++) {
+      const slice = tJoined.slice(i, i + qJoined.length);
+      const d = lev(qJoined, slice);
+      if (d <= tol) {
+        return 2200 - d * 50 - i;
+      }
+    }
+  }
 
   // Uma palavra digitada deve encontrar essa palavra em qualquer posição do nome
   // Ex: "Girl" encontra "Very Good Girl", "Good Girl" e "Poison Girl".
