@@ -3,27 +3,134 @@ import { Search, X, Sparkles } from "lucide-react";
 import { perfumes, type Perfume } from "@/data/perfumes";
 import { PerfumeResult } from "./PerfumeResult";
 
+// Sinônimos comuns: número escrito ↔ algarismo
+const SYNONYMS: Record<string, string> = {
+  one: "1", two: "2", three: "3", four: "4", five: "5",
+  um: "1", dois: "2", tres: "3",
+  million: "1000000", // não usado, só placeholder
+};
+
 const normalize = (s: string) =>
   s.toLowerCase()
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
+    .replace(/&/g, " and ")
     .replace(/[^a-z0-9\s]/g, " ")
     .replace(/\s+/g, " ")
-    .trim();
+    .trim()
+    .split(" ")
+    .map(t => SYNONYMS[t] ?? t)
+    .join(" ");
+
+// Stopwords/marcas comuns que não devem dominar o match
+const STOP = new Set([
+  "de", "da", "do", "the", "le", "la", "for", "by", "and",
+  "men", "man", "women", "woman", "homme", "femme", "her", "him", "pour",
+  "edp", "edt", "eau", "parfum", "perfume",
+]);
+
+// Levenshtein distance (iterativo)
+function lev(a: string, b: string): number {
+  if (a === b) return 0;
+  if (!a.length) return b.length;
+  if (!b.length) return a.length;
+  const m = a.length, n = b.length;
+  let prev = new Array(n + 1);
+  let curr = new Array(n + 1);
+  for (let j = 0; j <= n; j++) prev[j] = j;
+  for (let i = 1; i <= m; i++) {
+    curr[0] = i;
+    for (let j = 1; j <= n; j++) {
+      const cost = a.charCodeAt(i - 1) === b.charCodeAt(j - 1) ? 0 : 1;
+      curr[j] = Math.min(
+        curr[j - 1] + 1,
+        prev[j] + 1,
+        prev[j - 1] + cost
+      );
+    }
+    [prev, curr] = [curr, prev];
+  }
+  return prev[n];
+}
+
+// Tolerância em função do tamanho do token: 4-5 chars => 1 erro, 6-8 => 2, >8 => 3
+function maxErrors(len: number): number {
+  if (len <= 3) return 0;
+  if (len <= 5) return 1;
+  if (len <= 8) return 2;
+  return 3;
+}
+
+// Pontua um token da query contra os tokens do alvo (retorna melhor pontuação)
+function tokenScore(qt: string, tTokens: string[]): number {
+  let best = 0;
+  for (const tt of tTokens) {
+    if (!tt) continue;
+    if (tt === qt) { best = Math.max(best, 100); continue; }
+    if (tt.startsWith(qt)) { best = Math.max(best, 80); continue; }
+    if (qt.length >= 3 && tt.includes(qt)) { best = Math.max(best, 55); continue; }
+    // fuzzy: comparar com o token inteiro (mais tolerante)
+    if (qt.length >= 3) {
+      const tol = maxErrors(Math.max(qt.length, tt.length));
+      // diferença de tamanho não pode exceder a tolerância
+      if (Math.abs(tt.length - qt.length) <= tol) {
+        const d = lev(qt, tt);
+        if (d <= tol) {
+          best = Math.max(best, 75 - d * 10);
+          continue;
+        }
+      }
+      // fuzzy prefixo: comparar com o início do token alvo
+      if (tt.length > qt.length) {
+        const slice = tt.slice(0, qt.length);
+        const d = lev(qt, slice);
+        if (d <= maxErrors(qt.length)) {
+          best = Math.max(best, 65 - d * 10);
+        }
+      }
+    }
+  }
+  return best;
+}
 
 function score(query: string, perfume: Perfume): number {
   const q = normalize(query);
   if (!q) return 0;
   const target = normalize(perfume.inspiracao);
-  if (target === q) return 1000;
-  if (target.startsWith(q)) return 500 + (100 - Math.min(target.length, 100));
-  if (target.includes(" " + q)) return 300;
-  if (target.includes(q)) return 200;
-  // token-based partial
-  const qTokens = q.split(" ");
-  const tTokens = target.split(" ");
-  const hits = qTokens.filter(qt => qt.length > 1 && tTokens.some(tt => tt.startsWith(qt))).length;
-  return hits > 0 ? 50 + hits * 10 : 0;
+
+  // Boosts diretos
+  if (target === q) return 10000;
+  if (target.startsWith(q + " ") || target === q) return 5000;
+  if (target.includes(" " + q + " ") || target.startsWith(q)) return 3000;
+  if (q.length >= 3 && target.includes(q)) return 1500;
+
+  // Match por tokens com fuzzy
+  const qTokens = q.split(" ").filter(t => t.length > 0);
+  const tTokens = target.split(" ").filter(t => t.length > 0);
+
+  let total = 0;
+  let strongHits = 0;
+  let consideredTokens = 0;
+
+  for (const qt of qTokens) {
+    const isStop = STOP.has(qt);
+    const weight = isStop ? 0.2 : 1;
+    if (!isStop) consideredTokens++;
+    const s = tokenScore(qt, tTokens);
+    if (s >= 70 && !isStop) strongHits++;
+    total += s * weight;
+  }
+
+  if (consideredTokens === 0) return 0;
+
+  // Exige pelo menos 1 hit forte para queries multi-palavra significativas,
+  // ou um hit razoável para query de 1 palavra
+  if (qTokens.filter(t => !STOP.has(t)).length >= 2 && strongHits === 0 && total < 100) {
+    return 0;
+  }
+  if (total < 30) return 0;
+
+  return total;
 }
 
 export const PerfumeSearch = () => {
