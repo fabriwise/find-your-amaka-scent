@@ -5,9 +5,10 @@ import { PerfumeResult } from "./PerfumeResult";
 
 // Sinônimos comuns: número escrito ↔ algarismo
 const SYNONYMS: Record<string, string> = {
-  one: "1", two: "2", three: "3", four: "4", five: "5",
-  um: "1", dois: "2", tres: "3",
-  million: "1000000", // não usado, só placeholder
+  "1": "one", um: "one",
+  "2": "two", dois: "two",
+  "3": "three", tres: "three",
+  milion: "million", milhon: "million", milhao: "million", milhoes: "million",
 };
 
 const normalize = (s: string) =>
@@ -140,6 +141,7 @@ function score(query: string, perfume: Perfume): number {
   if (meaningful.length === 1) {
     const qt = meaningful[0];
     if (tTokens.includes(qt)) return 2500 + Math.max(0, 80 - target.length);
+    if (tTokens.some(tt => tokenScore(qt, [tt]) >= 70)) return 2300 + Math.max(0, 60 - target.length);
     if (qt.length >= 3 && tTokens.some(tt => tt.includes(qt))) return 1800;
   }
 
