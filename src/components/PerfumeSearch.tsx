@@ -265,7 +265,7 @@ export const PerfumeSearch = () => {
             <div className="px-5 py-3 text-xs uppercase tracking-[0.2em] text-muted-foreground border-b border-border bg-muted/40">
               {matches.length === 1 ? "1 inspiração encontrada" : `${matches.length} inspirações encontradas — escolha uma`}
             </div>
-            <ul className="max-h-[70vh] overflow-y-auto overscroll-contain touch-pan-y">
+            <ul className="max-h-[300px] overflow-y-auto">
               {matches.map((p, i) => (
                 <li key={p.inspiracao + p.amakha}>
                   <button
