@@ -55,7 +55,6 @@ function lev(a: string, b: string): number {
 }
 
 // Tolerância em função do tamanho do token (mais permissiva)
-// 3 chars => 1 erro, 4-5 => 2, 6-8 => 3, >8 => 4
 function maxErrors(len: number): number {
   if (len <= 2) return 0;
   if (len <= 3) return 1;
@@ -72,7 +71,6 @@ function tokenScore(qt: string, tTokens: string[]): number {
     if (tt === qt) { best = Math.max(best, 100); continue; }
     if (tt.startsWith(qt)) { best = Math.max(best, 80); continue; }
     if (qt.length >= 3 && tt.includes(qt)) { best = Math.max(best, 55); continue; }
-    // fuzzy: comparar com o token inteiro (mais tolerante)
     if (qt.length >= 3) {
       const tol = maxErrors(Math.max(qt.length, tt.length));
       if (Math.abs(tt.length - qt.length) <= tol) {
@@ -82,7 +80,6 @@ function tokenScore(qt: string, tTokens: string[]): number {
           continue;
         }
       }
-      // fuzzy prefixo: comparar com o início do token alvo
       if (tt.length > qt.length) {
         const slice = tt.slice(0, qt.length);
         const d = lev(qt, slice);
@@ -90,7 +87,6 @@ function tokenScore(qt: string, tTokens: string[]): number {
           best = Math.max(best, 68 - d * 8);
         }
       }
-      // fuzzy substring: procurar a melhor janela do tamanho da query dentro do token
       if (tt.length > qt.length + 1) {
         const tol = maxErrors(qt.length);
         for (let i = 0; i <= tt.length - qt.length; i++) {
@@ -116,17 +112,14 @@ function score(query: string, perfume: Perfume): number {
   const tTokens = target.split(" ").filter(t => t.length > 0);
   const meaningful = qTokens.filter(t => !STOP.has(t));
 
-  // Boosts diretos
   if (target === q) return 10000;
   if (target.startsWith(q + " ") || target === q) return 5000;
   if (target.includes(" " + q + " ") || target.startsWith(q) || target.endsWith(" " + q)) return 3000;
 
-  // Fuzzy sobre o nome inteiro sem espaços (ex.: "milhon" ~ "onemillion")
   const qJoined = q.replace(/\s+/g, "");
   const tJoined = target.replace(/\s+/g, "");
   if (qJoined.length >= 4 && tJoined.length >= qJoined.length) {
     const tol = maxErrors(qJoined.length);
-    // tenta como substring fuzzy dentro do alvo
     for (let i = 0; i <= tJoined.length - qJoined.length; i++) {
       const slice = tJoined.slice(i, i + qJoined.length);
       const d = lev(qJoined, slice);
@@ -136,8 +129,6 @@ function score(query: string, perfume: Perfume): number {
     }
   }
 
-  // Uma palavra digitada deve encontrar essa palavra em qualquer posição do nome
-  // Ex: "Girl" encontra "Very Good Girl", "Good Girl" e "Poison Girl".
   if (meaningful.length === 1) {
     const qt = meaningful[0];
     if (tTokens.includes(qt)) return 2500 + Math.max(0, 80 - target.length);
@@ -145,7 +136,6 @@ function score(query: string, perfume: Perfume): number {
     if (qt.length >= 3 && tTokens.some(tt => tt.includes(qt))) return 1800;
   }
 
-  // Match por tokens com fuzzy
   let total = 0;
   let strongHits = 0;
   let consideredTokens = 0;
@@ -161,17 +151,13 @@ function score(query: string, perfume: Perfume): number {
 
   if (consideredTokens === 0) return 0;
 
-  // Exige pelo menos 1 hit forte para queries multi-palavra significativas,
-  // ou um hit razoável para query de 1 palavra
   if (meaningful.length >= 2 && strongHits === 0 && total < 100) {
     return 0;
   }
   if (total < 30) return 0;
 
-  // Para query de 1 token, considere também todos os perfumes que contenham
-  // esse token (mesmo que apareça depois no nome — ex: "girl" em "Very Good Girl")
   if (meaningful.length === 1 && strongHits >= 1) {
-    total += 50; // pequeno boost para garantir inclusão acima do limiar
+    total += 50;
   }
 
   return total;
@@ -242,7 +228,7 @@ export const PerfumeSearch = () => {
             value={query}
             onChange={(e) => { setQuery(e.target.value); setOpen(true); setSelected(null); }}
             onFocus={() => setOpen(true)}
-            onBlur={() => {}}
+            onBlur={() => setTimeout(() => setOpen(false), 150)}
             onKeyDown={onKey}
             placeholder="Ex: 212 Vip, Acqua di Gio, Alien…"
             className="w-full pl-14 pr-12 py-5 bg-card border border-border rounded-sm text-base md:text-lg font-light placeholder:text-muted-foreground/60 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all shadow-soft"
@@ -251,7 +237,7 @@ export const PerfumeSearch = () => {
           />
           {query && (
             <button
-              onClick={reset}
+              onMouseDown={(e) => { e.preventDefault(); reset(); }}
               className="absolute right-4 p-1.5 rounded-full text-muted-foreground hover:text-foreground hover:bg-muted transition-colors"
               aria-label="Limpar"
             >
@@ -269,7 +255,7 @@ export const PerfumeSearch = () => {
               {matches.map((p, i) => (
                 <li key={p.inspiracao + p.amakha}>
                   <button
-                    onClick={() => choose(p)}
+                    onMouseDown={(e) => { e.preventDefault(); choose(p); }}
                     onMouseEnter={() => setHighlight(i)}
                     className={`w-full text-left px-5 py-3 flex items-center justify-between gap-4 transition-colors ${
                       i === highlight ? "bg-accent/15" : "hover:bg-muted/60"
