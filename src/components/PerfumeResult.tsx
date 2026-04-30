@@ -38,6 +38,8 @@ export const PerfumeResult = ({ perfume, onReset }: Props) => {
             {perfume.link ? (
               <a
                 href={perfume.link}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 font-display text-5xl md:text-6xl font-semibold gold-text leading-none hover:opacity-90 transition-opacity"
               >
                 <span className="border-b-2 border-transparent group-hover:border-gold-soft/60 transition-colors">
