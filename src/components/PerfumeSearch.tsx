@@ -160,7 +160,7 @@ export const PerfumeSearch = () => {
       .map(p => ({ p, s: score(query, p) }))
       .filter(x => x.s > 0)
       .sort((a, b) => b.s - a.s)
-      .slice(0, 12)
+      .slice(0, 20)
       .map(x => x.p);
   }, [query]);
 
@@ -212,7 +212,7 @@ export const PerfumeSearch = () => {
             value={query}
             onChange={(e) => { setQuery(e.target.value); setOpen(true); setSelected(null); }}
             onFocus={() => setOpen(true)}
-            onBlur={() => setTimeout(() => setOpen(false), 150)}
+            onBlur={() => setTimeout(() => setOpen(false), 250)}
             onKeyDown={onKey}
             placeholder="Ex: 212 Vip, Acqua di Gio, Alien…"
             className="w-full pl-14 pr-12 py-5 bg-card border border-border rounded-sm text-base md:text-lg font-light placeholder:text-muted-foreground/60 focus:outline-none focus:border-gold focus:ring-2 focus:ring-gold/20 transition-all shadow-soft"
@@ -231,11 +231,11 @@ export const PerfumeSearch = () => {
         </div>
 
         {open && matches.length > 0 && !selected && (
-          <div className="absolute z-20 mt-2 w-full bg-popover border border-border rounded-sm shadow-luxe overflow-hidden animate-fade-in">
+          <div className="absolute z-20 mt-2 w-full bg-popover border border-border rounded-sm shadow-luxe animate-fade-in">
             <div className="px-5 py-3 text-xs uppercase tracking-[0.2em] text-muted-foreground border-b border-border bg-muted/40">
               {matches.length === 1 ? "1 inspiração encontrada" : `${matches.length} inspirações encontradas — escolha uma`}
             </div>
-            <ul className="max-h-[60vh] overflow-y-auto overscroll-contain">
+            <ul className="max-h-[70vh] overflow-y-auto overscroll-contain touch-pan-y">
               {matches.map((p, i) => (
                 <li key={p.inspiracao + p.amakha}>
                   <button
