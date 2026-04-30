@@ -125,10 +125,17 @@ function score(query: string, perfume: Perfume): number {
 
   // Exige pelo menos 1 hit forte para queries multi-palavra significativas,
   // ou um hit razoável para query de 1 palavra
-  if (qTokens.filter(t => !STOP.has(t)).length >= 2 && strongHits === 0 && total < 100) {
+  const meaningful = qTokens.filter(t => !STOP.has(t)).length;
+  if (meaningful >= 2 && strongHits === 0 && total < 100) {
     return 0;
   }
   if (total < 30) return 0;
+
+  // Para query de 1 token, considere também todos os perfumes que contenham
+  // esse token (mesmo que apareça depois no nome — ex: "girl" em "Very Good Girl")
+  if (meaningful === 1 && strongHits >= 1) {
+    total += 50; // pequeno boost para garantir inclusão acima do limiar
+  }
 
   return total;
 }
@@ -146,7 +153,7 @@ export const PerfumeSearch = () => {
       .map(p => ({ p, s: score(query, p) }))
       .filter(x => x.s > 0)
       .sort((a, b) => b.s - a.s)
-      .slice(0, 8)
+      .slice(0, 12)
       .map(x => x.p);
   }, [query]);
 
@@ -221,7 +228,7 @@ export const PerfumeSearch = () => {
             <div className="px-5 py-3 text-xs uppercase tracking-[0.2em] text-muted-foreground border-b border-border bg-muted/40">
               {matches.length === 1 ? "1 inspiração encontrada" : `${matches.length} inspirações encontradas — escolha uma`}
             </div>
-            <ul className="max-h-80 overflow-y-auto">
+            <ul className="max-h-[60vh] overflow-y-auto overscroll-contain">
               {matches.map((p, i) => (
                 <li key={p.inspiracao + p.amakha}>
                   <button
