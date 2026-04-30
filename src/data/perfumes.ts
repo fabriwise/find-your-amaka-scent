@@ -10,6 +10,7 @@ export type Perfume = {
   notasTopo: string;
   notasCorpo: string;
   notasFundo: string;
+  link?: string;
 };
 
 export const perfumes: Perfume[] = [
@@ -24,7 +25,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Mandarina Sanguínea , Toranja e Hortelã",
     "notasCorpo": "Canela, Notas Especiadas e Rosa",
-    "notasFundo": "Âmbar, Couro, Notas Amadeiradas e Patchouli Indiano"
+    "notasFundo": "Âmbar, Couro, Notas Amadeiradas e Patchouli Indiano",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/fortune"
   },
   {
     "inspiracao": "212 Men - Carolina Herrera",
@@ -37,7 +39,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Notas Verdes, Toranja, Especiarias, Bergamota, Lavanda e Petitgrain",
     "notasCorpo": "Gengibre, Violeta, Gardênia e Sálvia",
-    "notasFundo": "Almíscar, Sândalo, Incenso, Vetiver, Madeira Guaiac e Ládano"
+    "notasFundo": "Almíscar, Sândalo, Incenso, Vetiver, Madeira Guaiac e Ládano",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/521-men"
   },
   {
     "inspiracao": "212 NYC - Carolina Herrera",
@@ -50,7 +53,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Flor de Laranjeira, Mandarina, Bergamota e Toranja Rosa",
     "notasCorpo": "Gardênia, Camélia, Lírio-do-Vale e Íris",
-    "notasFundo": "Almíscar Branco e Sândalo"
+    "notasFundo": "Almíscar Branco e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/521-woman"
   },
   {
     "inspiracao": "212 Sexy - Carolina Herrera",
@@ -63,7 +67,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Pimenta Rosa, Mandarina e Bergamota",
     "notasCorpo": "Algodão-doce, Gardênia, Flores, Pelargonium e Rosa",
-    "notasFundo": "Baunilha, Almíscar, Sândalo, Caramelo, Patchouli ou Oriza e Violeta"
+    "notasFundo": "Baunilha, Almíscar, Sândalo, Caramelo, Patchouli ou Oriza e Violeta",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/521-sexy"
   },
   {
     "inspiracao": "212 Sexy MEN - Carolina Herrera",
@@ -76,7 +81,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Notas cítricas, notas verdes.",
     "notasCorpo": "Pimenta preta, madeira de Guaiaco e cardamomo.",
-    "notasFundo": "Baunilha, âmbar e sândalo."
+    "notasFundo": "Baunilha, âmbar e sândalo.",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/521-sexy-men"
   },
   {
     "inspiracao": "212 Vip - Carolina Herrera",
@@ -89,7 +95,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Rum e Maracujá",
     "notasCorpo": "Gardênia e Almíscar",
-    "notasFundo": "Baunilha e Fava Tonka"
+    "notasFundo": "Baunilha e Fava Tonka",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/521-vip"
   },
   {
     "inspiracao": "212 Vip Black - Carolina Herrera",
@@ -102,7 +109,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Abscinto, anis, erva-doce",
     "notasCorpo": "Lavanda",
-    "notasFundo": "Baunilha Negra e Almíscar"
+    "notasFundo": "Baunilha Negra e Almíscar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/521-vip-black"
   },
   {
     "inspiracao": "212 Vip Men - Carolina Herrera",
@@ -115,7 +123,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Maracujá, Lima, Pimenta e Gengibre",
     "notasCorpo": "Vodka, Gin, Hortelã e Especiarias",
-    "notasFundo": "Âmbar, Couro e Notas Amadeiradas"
+    "notasFundo": "Âmbar, Couro e Notas Amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/521-vip-men"
   },
   {
     "inspiracao": "212 Vip Rosé - Carolina Herrera",
@@ -128,7 +137,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Champanhe e Notas Frutadas",
     "notasCorpo": "Flor de Pêssego",
-    "notasFundo": "Almíscar Branco, Notas Amadeiradas e Âmbar"
+    "notasFundo": "Almíscar Branco, Notas Amadeiradas e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/521-vip-ros%C3%A9"
   },
   {
     "inspiracao": "212 YOUNG FOREVER FOR HER - CAROLINA HERRERA",
@@ -141,7 +151,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "framboesa e tangerina",
     "notasCorpo": "flor de laranjeira e jasmim",
-    "notasFundo": "sândalo e cedro"
+    "notasFundo": "sândalo e cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/521-young-for-her"
   },
   {
     "inspiracao": "212 YOUNG FOREVER FOR HIM - CAROLINA HERRERA",
@@ -154,7 +165,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "gengibre e pera",
     "notasCorpo": "sálvia e gerânio",
-    "notasFundo": "couro e almíscar"
+    "notasFundo": "couro e almíscar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/521-young-for-him"
   },
   {
     "inspiracao": "Acqua di Gio",
@@ -167,7 +179,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Lima, Limão, Bergamota, Jasmim, Laranja, Mandarina e Néroli",
     "notasCorpo": "Notas Oceânicas, Jasmim, Calone, Pêssego, Frésia, Jacinto, Cyclamen, Alecrim, Violeta, Coentro, Noz-moscada, Rosa e Resedá",
-    "notasFundo": "Almíscar Branco, Cedro, Musgo de Carvalho, Patchouli ou Oriza e Âmbar"
+    "notasFundo": "Almíscar Branco, Cedro, Musgo de Carvalho, Patchouli ou Oriza e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/acqua"
   },
   {
     "inspiracao": "Água de Gioia - Giorgio Armani",
@@ -180,7 +193,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Limão de Amalfi e Hortelã",
     "notasCorpo": "Jasmim, Peônia e Pimenta Rosa",
-    "notasFundo": "Cedro da Virgínia, Ládano francês e Açúcar mascavo"
+    "notasFundo": "Cedro da Virgínia, Ládano francês e Açúcar mascavo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/%C3%A1guas-marinhas"
   },
   {
     "inspiracao": "Al Wataniah",
@@ -193,7 +207,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Pimenta Rosa, Mandarina e Ameixa Selvagem",
     "notasCorpo": "Flor de Laranjeira, Semente de Cacau, Jasmim Samba",
-    "notasFundo": "Baunilha, Fava Tonka, Patchouli"
+    "notasFundo": "Baunilha, Fava Tonka, Patchouli",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/al-sabah"
   },
   {
     "inspiracao": "Alien - Thierry Mugler",
@@ -206,7 +221,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Jasmim",
     "notasCorpo": "Notas Amadeiradas",
-    "notasFundo": "Âmbar"
+    "notasFundo": "Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/alen"
   },
   {
     "inspiracao": "Allure Sport - Chanel",
@@ -219,7 +235,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Laranja, Notas Oceânicas, Aldeídos e Mandarina Sanguínea",
     "notasCorpo": "Pimenta, Néroli e Cedro",
-    "notasFundo": "Fava Tonka, Baunilha, Almíscar Branco, Âmbar, Vetiver e Resina de Elemi"
+    "notasFundo": "Fava Tonka, Baunilha, Almíscar Branco, Âmbar, Vetiver e Resina de Elemi",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/allur-sport"
   },
   {
     "inspiracao": "Amarige - Givenchy",
@@ -232,7 +249,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Flor de Laranjeira, Pêssego, Ameixa, Néroli, Pau-Rosa, Mandarina e Violeta",
     "notasCorpo": "Tuberosa, Mimosa, Gardênia, Ylang Ylang, Jasmim, Acácia branca ou falsa acácia, Cravo, Bagas vermelhas, Groselha Preta, Cássia, Rosa e Orquídea",
-    "notasFundo": "Sândalo, Notas Amadeiradas, Baunilha, Âmbar, Fava Tonka, Almíscar e Cedro"
+    "notasFundo": "Sândalo, Notas Amadeiradas, Baunilha, Âmbar, Fava Tonka, Almíscar e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/cl%C3%A1ssica"
   },
   {
     "inspiracao": "Amor Amor - Cacharel",
@@ -245,7 +263,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Groselha Preta, Laranja, Mandarina, Toranja, Cássia e Bergamota",
     "notasCorpo": "Rosa, Damasco, Jasmim, Lírio e Lírio-do-Vale",
-    "notasFundo": "Baunilha, Fava Tonka, Almíscar, Âmbar e Cedro da Virgínia"
+    "notasFundo": "Baunilha, Fava Tonka, Almíscar, Âmbar e Cedro da Virgínia",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/love"
   },
   {
     "inspiracao": "Anaïs Anaï - L'Original",
@@ -258,7 +277,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Jacinto, Gálbano e Flor de Laranjeira",
     "notasCorpo": "Lírio, Jasmim e Rosa",
-    "notasFundo": "Incenso, Sândalo, Âmbar e Cedro"
+    "notasFundo": "Incenso, Sândalo, Âmbar e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/attractive"
   },
   {
     "inspiracao": "Ange or Demon - Givenchy",
@@ -271,7 +291,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Açafrão, Tomilho e Mandarina",
     "notasCorpo": "Lírio, Ylang Ylang e Orquídea",
-    "notasFundo": "Baunilha, Fava Tonka, Pau-Rosa e Musgo de Carvalho"
+    "notasFundo": "Baunilha, Fava Tonka, Pau-Rosa e Musgo de Carvalho",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/anjos"
   },
   {
     "inspiracao": "Angel - Thierry Mugler",
@@ -284,7 +305,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Algodão-doce, Coco, Cassis ou groselha, Melão, Jasmim, Bergamota, Abacaxi e Mandarina",
     "notasCorpo": "Mel, Bagas vermelhas, Amora, Ameixa, Damasco, Pêssego, Jasmim, Orquídea, Alcarávia, Noz-moscada, Rosa e Lírio-do-Vale",
-    "notasFundo": "Patchouli ou Oriza, Chocolate, Caramelo, Baunilha, Fava Tonka, Âmbar, Almíscar e Sândalo"
+    "notasFundo": "Patchouli ou Oriza, Chocolate, Caramelo, Baunilha, Fava Tonka, Âmbar, Almíscar e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/angelina"
   },
   {
     "inspiracao": "Animale Animale For Men -",
@@ -297,7 +319,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Limão, Néroli e Frésia",
     "notasCorpo": "Lavanda, Bagas de Zimbro ou Junípero e Gerânio",
-    "notasFundo": "Musgo de Carvalho, Couro e Vetiver"
+    "notasFundo": "Musgo de Carvalho, Couro e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/animals"
   },
   {
     "inspiracao": "Armani - Giorgio Armani",
@@ -310,7 +333,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Limão, Bergamota, Mandarina, Laranja Verde e Manjericão",
     "notasCorpo": "Noz-moscada, Lavanda, Cravo, Jasmim, Lírio, Rosa e Canela",
-    "notasFundo": "Musgo de Carvalho, Vetiver, Sândalo, Cedro, Almíscar e Patchouli ou Oriza"
+    "notasFundo": "Musgo de Carvalho, Vetiver, Sândalo, Cedro, Almíscar e Patchouli ou Oriza",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/man"
   },
   {
     "inspiracao": "Armani Code - Giorgio Armani",
@@ -323,7 +347,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Laranja Italiana, Jasmim e Laranja Amarga",
     "notasCorpo": "Jasmim, Flor de Laranjeira e Gengibre",
-    "notasFundo": "Mel, Baunilha e Sândalo"
+    "notasFundo": "Mel, Baunilha e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/exclusive-code-woman"
   },
   {
     "inspiracao": "Armani Code - Giorgio Armani",
@@ -336,7 +361,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Lavanda, Limão e Bergamota",
     "notasCorpo": "Fava Tonka",
-    "notasFundo": "Baunilha, Camurça, Almíscar e Cedro"
+    "notasFundo": "Baunilha, Camurça, Almíscar e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/exclusive-code-man"
   },
   {
     "inspiracao": "ASAD LAFATTA",
@@ -349,7 +375,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia/Noite",
     "notasTopo": "Pimenta Preta, Bergamota Itália, Cravo Botão, Grapefruit",
     "notasCorpo": "Noz Moscada, Canela, Cedro",
-    "notasFundo": "Patchouli, Musgo, Vetiver Haiti"
+    "notasFundo": "Patchouli, Musgo, Vetiver Haiti",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/asadiyy"
   },
   {
     "inspiracao": "Aura Mugler - Thierry Mugler",
@@ -362,7 +389,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Folhas de Ruibarbo e Bergamota",
     "notasCorpo": "Notas Verdes, Flor de Laranjeira, Ylang Ylang e Pera",
-    "notasFundo": "Baunilha de Bourbon, Notas Amadeiradas, Madeira de Âmbar, Sândalo e Cumarina"
+    "notasFundo": "Baunilha de Bourbon, Notas Amadeiradas, Madeira de Âmbar, Sândalo e Cumarina",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/felina"
   },
   {
     "inspiracao": "Azzaro - Azzaro",
@@ -375,7 +403,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Lavanda, Anis, Limão, Alcarávia, Manjericão, Bergamota, Sálvia Esclaréia e Íris",
     "notasCorpo": "Vetiver, Sândalo, Patchouli ou Oriza, Cedro, Bagas de Zimbro ou Junípero e Cardamomo",
-    "notasFundo": "Musgo de Carvalho, Couro, Âmbar, Almíscar e Fava Tonka"
+    "notasFundo": "Musgo de Carvalho, Couro, Âmbar, Almíscar e Fava Tonka",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/strong"
   },
   {
     "inspiracao": "Azzaro Wanted - Azzaro",
@@ -388,7 +417,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Limão, Gengibre, Lavanda e Hortelã",
     "notasCorpo": "Maçã, Junípero ou zimbro, Cardamomo da Guatemala e Gerânio",
-    "notasFundo": "Fava Tonka, Madeira de Âmbar e Vetiver do Haiti"
+    "notasFundo": "Fava Tonka, Madeira de Âmbar e Vetiver do Haiti",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/tedd"
   },
   {
     "inspiracao": "Bad Boy",
@@ -401,7 +431,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Pimenta Branca, Pimenta Preta e Bergamota",
     "notasCorpo": "Sálvia e Cedro",
-    "notasFundo": "Fava Tonka, Cacau e Madeira de Âmbar"
+    "notasFundo": "Fava Tonka, Cacau e Madeira de Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/bad-man"
   },
   {
     "inspiracao": "Be Delicious - DKNY",
@@ -414,7 +445,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Pepino, Toranja e Magnólia",
     "notasCorpo": "Maçã Verde, Lírio-do-Vale, Tuberosa, Violeta e Rosa",
-    "notasFundo": "Notas Amadeiradas, Sândalo e Âmbar"
+    "notasFundo": "Notas Amadeiradas, Sândalo e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/green-apple"
   },
   {
     "inspiracao": "Black XS - Paco Rabanne",
@@ -427,7 +459,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Oxicoco, Pimenta Rosa e Tamarindo",
     "notasCorpo": "Cacau, Rosa e Violeta Negra",
-    "notasFundo": "Baunilha, Patchouli ou Oriza e Madeira de Massoia"
+    "notasFundo": "Baunilha, Patchouli ou Oriza e Madeira de Massoia",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/nights-lady"
   },
   {
     "inspiracao": "Black XS Men - Paco Rabanne",
@@ -440,7 +473,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Limão e Sálvia",
     "notasCorpo": "Pralinê, Canela, Tolú Bálsamo e Cardamomo Preto",
-    "notasFundo": "Pau-Rosa, Patchouli ou Oriza e Âmbar Negro"
+    "notasFundo": "Pau-Rosa, Patchouli ou Oriza e Âmbar Negro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/smell-for-men"
   },
   {
     "inspiracao": "Bleu - Chanel",
@@ -453,7 +487,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Toranja, Limão, Hortelã e Pimenta Rosa",
     "notasCorpo": "Gengibre, Noz-moscada, Jasmim e Iso E Super",
-    "notasFundo": "Incenso, Vetiver, Cedro, Sândalo, Patchouli ou Oriza, Ládano e Almíscar Branco"
+    "notasFundo": "Incenso, Vetiver, Cedro, Sândalo, Patchouli ou Oriza, Ládano e Almíscar Branco",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/bratt"
   },
   {
     "inspiracao": "Bonbon - Viktor & Rolf",
@@ -466,7 +501,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Pêssego, Mandarina e Laranja",
     "notasCorpo": "Caramelo, Flor de Laranjeira e Jasmim",
-    "notasFundo": "Âmbar, Sândalo, Madeira Guaiac e Cedro"
+    "notasFundo": "Âmbar, Sândalo, Madeira Guaiac e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/delice"
   },
   {
     "inspiracao": "Boss - Hugo Boss",
@@ -479,7 +515,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Maçã, Ameixa, Bergamota, Limão, Musgo de Carvalho e Gerânio",
     "notasCorpo": "Canela, Mogno e Cravo",
-    "notasFundo": "Baunilha, Sândalo, Cedro, Vetiver e Oliveira"
+    "notasFundo": "Baunilha, Sândalo, Cedro, Vetiver e Oliveira",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/radical-sport"
   },
   {
     "inspiracao": "CH Feminino - Carolina Herrera",
@@ -492,7 +529,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Fruta tropical, Bergamota, Limão de Amalfi, Toranja e Notas Aquáticas",
     "notasCorpo": "Pralinê, Canela, Flor de Laranjeira Africana, Jasmim e Tintura de Rosa",
-    "notasFundo": "Camurça, Patchouli ou Oriza, Madeira de Cashmere, Sândalo, Almíscar, Âmbar e Cedro da Virgínia"
+    "notasFundo": "Camurça, Patchouli ou Oriza, Madeira de Cashmere, Sândalo, Almíscar, Âmbar e Cedro da Virgínia",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/ak-woman"
   },
   {
     "inspiracao": "CH Men - Carolina Herrera",
@@ -505,7 +543,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Grama, Bergamota e Toranja",
     "notasCorpo": "Notas Amadeiradas, Noz-moscada, Violeta, Açafrão e Jasmim",
-    "notasFundo": "Açúcar, Couro, Baunilha, Camurça, Âmbar, Madeira de Cashmir, Sândalo, Musgo de Carvalho e Vetiver"
+    "notasFundo": "Açúcar, Couro, Baunilha, Camurça, Âmbar, Madeira de Cashmir, Sândalo, Musgo de Carvalho e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/ak-men"
   },
   {
     "inspiracao": "CH Men Privé - Carolina Herrera",
@@ -518,7 +557,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Whiskey, Toranja e Pomela",
     "notasCorpo": "Cardamomo, Lavanda, Sálvia e Tomilho vermelho",
-    "notasFundo": "Couro, Fava Tonka, Benjoim e Notas Amadeiradas"
+    "notasFundo": "Couro, Fava Tonka, Benjoim e Notas Amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/intense"
   },
   {
     "inspiracao": "Chance - Chanel",
@@ -531,7 +571,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Pimenta Rosa",
     "notasCorpo": "Jasmim e Íris",
-    "notasFundo": "Patchouli ou Oriza, Almíscar e Baunilha"
+    "notasFundo": "Patchouli ou Oriza, Almíscar e Baunilha",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/miss"
   },
   {
     "inspiracao": "Chanel nº 5 - Chanel",
@@ -557,7 +598,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Peônia, Lichia e Frésia",
     "notasCorpo": "Rosa, Lírio-do-Vale e Magnólia",
-    "notasFundo": "Cedro da Virgínia e Âmbar"
+    "notasFundo": "Cedro da Virgínia e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/cl%C3%B4"
   },
   {
     "inspiracao": "CK Be - Calvin Klein",
@@ -570,7 +612,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Lavanda, Notas Verdes, Bergamota, Hortelã, Junípero ou zimbro e Mandarina",
     "notasCorpo": "Grama verde, Pêssego, Jasmim, Frésia, Magnólia e Orquídea",
-    "notasFundo": "Almíscar, Sândalo, Cedro, Baunilha, Âmbar e Opoponax"
+    "notasFundo": "Almíscar, Sândalo, Cedro, Baunilha, Âmbar e Opoponax",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/all-sexes"
   },
   {
     "inspiracao": "Club De Nuit - Armaf",
@@ -583,7 +626,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Limão, Abacaxi, Bergamota, Groselha Preta e Maçã",
     "notasCorpo": "Vidoeiro, Jasmim e Rosa",
-    "notasFundo": "Almíscar, Âmbar Cinzento, Patchouli e Baunilha"
+    "notasFundo": "Almíscar, Âmbar Cinzento, Patchouli e Baunilha",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/malik-nuit"
   },
   {
     "inspiracao": "Coco Mademoiselle - Chanel",
@@ -596,7 +640,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Laranja, Mandarina, Bergamota e Flor de Laranjeira",
     "notasCorpo": "Rosa Turca, Jasmim, Mimosa e Ylang Ylang",
-    "notasFundo": "Patchouli ou Oriza, Almíscar Branco, Baunilha, Vetiver, Fava Tonka e Opoponax"
+    "notasFundo": "Patchouli ou Oriza, Almíscar Branco, Baunilha, Vetiver, Fava Tonka e Opoponax",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/chic-woman"
   },
   {
     "inspiracao": "Creed - Aventus",
@@ -609,7 +654,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Abacaxi, Bergamota, Groselha Preta e Maçã",
     "notasCorpo": "Vidoeiro, Patchouli ou Oriza, Jasmim Marroquino e Rosa",
-    "notasFundo": "Almíscar, Musgo de Carvalho, Âmbar Cinzento e Baunilha"
+    "notasFundo": "Almíscar, Musgo de Carvalho, Âmbar Cinzento e Baunilha",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/trust"
   },
   {
     "inspiracao": "Dior Addict",
@@ -622,7 +668,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Amora e Folha de Mandarina",
     "notasCorpo": "Jasmim, Peniocereus, Flor de Laranjeira e Rosa",
-    "notasFundo": "Baunilha, Fava Tonka e Sândalo"
+    "notasFundo": "Baunilha, Fava Tonka e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/addictive"
   },
   {
     "inspiracao": "Emblem - Mont Blanc",
@@ -635,7 +682,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Sálvia Esclaréia, Toranja e Cardamomo",
     "notasCorpo": "Folha de Violeta e Canela",
-    "notasFundo": "Fava Tonka e Notas Amadeiradas"
+    "notasFundo": "Fava Tonka e Notas Amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/insigne"
   },
   {
     "inspiracao": "Eternity - Calvin Klein",
@@ -648,7 +696,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Notas Verdes, Frésia, Sálvia, Cítricos e Mandarina",
     "notasCorpo": "Cravo, Lírio, Lírio-do-Vale, Narciso, Cravo-de-Defunto, Violeta, Rosa e Jasmim",
-    "notasFundo": "Heliotrópio, Almíscar, Sândalo, Âmbar e Patchouli ou Oriza"
+    "notasFundo": "Heliotrópio, Almíscar, Sândalo, Âmbar e Patchouli ou Oriza",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/leternite-for-woman"
   },
   {
     "inspiracao": "Eternity For Men - Calvin Klein",
@@ -661,7 +710,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Lavanda, Limão, Bergamota e Mandarina",
     "notasCorpo": "Sálvia, Bagas de Zimbro ou Junípero, Manjericão, Coentro, Gerânio, Jasmim, Flor de Laranjeira, Lírio e Lírio-do-Vale",
-    "notasFundo": "Sândalo, Vetiver, Almíscar, Pau-Rosa e Âmbar"
+    "notasFundo": "Sândalo, Vetiver, Almíscar, Pau-Rosa e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/leternite-for-man"
   },
   {
     "inspiracao": "Euphoria - Calvin Klein",
@@ -674,7 +724,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Romã, Caqui e Acorde Verde",
     "notasCorpo": "Orquídea Negra, Lótus e Champaca",
-    "notasFundo": "Mogno, Âmbar, Violeta Negra e Chantilly"
+    "notasFundo": "Mogno, Âmbar, Violeta Negra e Chantilly",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/euphoric"
   },
   {
     "inspiracao": "Euphoria Men - Calvin Klein",
@@ -687,7 +738,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Gengibre e Pimenta",
     "notasCorpo": "Manjericão preto, Sálvia e Cedro",
-    "notasFundo": "Âmbar, Camurça, Sequoia Brasileira e Patchouli ou Oriza"
+    "notasFundo": "Âmbar, Camurça, Sequoia Brasileira e Patchouli ou Oriza",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/satisfaction"
   },
   {
     "inspiracao": "Fahrenheit - Dior",
@@ -700,7 +752,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "lor de Noz-Moscada, Lavanda, Cedro, Camomila, Mandarina, Espinheiro branco, Bergamota e Limão",
     "notasCorpo": "Folha de Violeta, Noz-moscada, Cedro, Sândalo, Madressilva, Cravo, Jasmim e Lírio-do-Vale",
-    "notasFundo": "Couro, Vetiver, Almíscar, Âmbar, Patchouli ou Oriza e Fava Tonka"
+    "notasFundo": "Couro, Vetiver, Almíscar, Âmbar, Patchouli ou Oriza e Fava Tonka",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/fire-men"
   },
   {
     "inspiracao": "FAKHAR LAFATTA",
@@ -713,7 +766,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia/Noite",
     "notasTopo": "Frutas, Lírio, Romã",
     "notasCorpo": "Tuberosa, Jasmim, Gardênia, Madressilva, Ylang Ylang, Rosa, Peônia",
-    "notasFundo": "Baunilha, Almíscar Branco, Sândalo, Musk"
+    "notasFundo": "Baunilha, Almíscar Branco, Sândalo, Musk",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/hasan-rose"
   },
   {
     "inspiracao": "FAME - PACO RABANNE",
@@ -726,7 +780,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Manga e Bergamota",
     "notasCorpo": "Jasmim, Notas metálicas",
-    "notasFundo": "Baunilha, Sândalo e Olíbano"
+    "notasFundo": "Baunilha, Sândalo e Olíbano",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/famous-for-her"
   },
   {
     "inspiracao": "Fantasy - Britney Spears",
@@ -739,7 +794,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Kiwi, Lichia vermelha e Marmelo",
     "notasCorpo": "Chocolate branco, Cupcake, Orquídea",
-    "notasFundo": "Almíscar, Raíz de Orris ou Lírio Florentino e Notas Amadeiradas"
+    "notasFundo": "Almíscar, Raíz de Orris ou Lírio Florentino e Notas Amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/fantastic"
   },
   {
     "inspiracao": "Ferrari Black - Ferrari",
@@ -752,7 +808,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Maçã Vermelha, Ameixa, Lima e Bergamota",
     "notasCorpo": "Canela, Jasmim, Cardamomo e Rosa",
-    "notasFundo": "Baunilha, Âmbar, Cedro e Almíscar"
+    "notasFundo": "Baunilha, Âmbar, Cedro e Almíscar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/fast-car-black"
   },
   {
     "inspiracao": "Flower by Kenzo - Kenzo",
@@ -765,7 +822,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Rosa Búlgara, Espinheiro branco, Groselha Preta e Mandarina",
     "notasCorpo": "Violeta de Parma, Rosa, Opoponax e Jasmim",
-    "notasFundo": "Baunilha, Almíscar Branco e Incenso"
+    "notasFundo": "Baunilha, Almíscar Branco e Incenso",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/summer-flowers"
   },
   {
     "inspiracao": "Good Girl - Carolina Herrera",
@@ -778,7 +836,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Amêndoa, Café, Bergamota e Limão",
     "notasCorpo": "Tuberosa, Jasmim Sambac, Flor de Laranjeira, Raíz de Orris ou Lírio Florentino e Rosa Búlgara",
-    "notasFundo": "Fava Tonka, Cacau, Baunilha, Pralinê, Sândalo, Âmbar, Almíscar, Madeira de Cashmere, Canela, Patchouli ou Oriza e Cedro"
+    "notasFundo": "Fava Tonka, Cacau, Baunilha, Pralinê, Sândalo, Âmbar, Almíscar, Madeira de Cashmere, Canela, Patchouli ou Oriza e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/gd"
   },
   {
     "inspiracao": "Good Girl Légère - Carolina Herrera",
@@ -791,7 +850,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia e Noite",
     "notasTopo": "Ylang Ylang, Mandarina e Bergamota",
     "notasCorpo": "Rosa búlgara e Buquê de flores brancas",
-    "notasFundo": "Âmbar dourado, Doce de leite, Fava Tonca e Notas amadeiradas"
+    "notasFundo": "Âmbar dourado, Doce de leite, Fava Tonca e Notas amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/gd-l%C3%A9g%C3%A8re"
   },
   {
     "inspiracao": "Gucci Bamboo - Gucci",
@@ -804,7 +864,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Bergamota",
     "notasCorpo": "Lírio Casablanca, Ylang Ylang e Flor de Laranjeira",
-    "notasFundo": "Sândalo, Baunilha do Tahiti e Âmbar"
+    "notasFundo": "Sândalo, Baunilha do Tahiti e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/wonderful-girl"
   },
   {
     "inspiracao": "Gucci Bloom - Gucci",
@@ -817,7 +878,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Jasmim",
     "notasCorpo": "Tuberosa",
-    "notasFundo": "Rastejador de Rangoon"
+    "notasFundo": "Rastejador de Rangoon",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/bouquet"
   },
   {
     "inspiracao": "Gucci Guilty - Gucci",
@@ -830,7 +892,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Junípero ou zimbro, Limão e Lavanda",
     "notasCorpo": "Flor de Laranjeira, Noz-moscada e Ládano espanhol",
-    "notasFundo": "Almíscar, Madeira Seca e Patchouli ou Oriza"
+    "notasFundo": "Almíscar, Madeira Seca e Patchouli ou Oriza",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/aphrodisiac"
   },
   {
     "inspiracao": "Hypnóse - Lâncome",
@@ -843,7 +906,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Flor de Maracujá",
     "notasCorpo": "Jasmim e Gardênia",
-    "notasFundo": "Baunilha e Vetiver"
+    "notasFundo": "Baunilha e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/hypnotize"
   },
   {
     "inspiracao": "IDÔLE - LACÔME",
@@ -856,7 +920,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Pera; Bergamota; Pimenta Rosa",
     "notasCorpo": "Rosa; Jasmim",
-    "notasFundo": "Almíscar Branco; Baunilha; Patchouli; Cedro"
+    "notasFundo": "Almíscar Branco; Baunilha; Patchouli; Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/change"
   },
   {
     "inspiracao": "Invictus - Paco Rabanne",
@@ -869,7 +934,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Notas Oceânicas, Toranja e Mandarina",
     "notasCorpo": "Folha de Louro e Jasmim",
-    "notasFundo": "Âmbar Cinzento, Madeira Guaiac, Musgo de Carvalho e Patchouli ou Oriza"
+    "notasFundo": "Âmbar Cinzento, Madeira Guaiac, Musgo de Carvalho e Patchouli ou Oriza",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/imortal"
   },
   {
     "inspiracao": "J'Adore - Dior",
@@ -882,7 +948,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Pera, Melão, Magnólia, Pêssego, Mandarina e Bergamota",
     "notasCorpo": "Jasmim, Lírio-do-Vale, Tuberosa, Frésia, Rosa, Orquídea, Ameixa e Violeta",
-    "notasFundo": "Almíscar, Baunilha, Amora e Cedro"
+    "notasFundo": "Almíscar, Baunilha, Amora e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/jetaime"
   },
   {
     "inspiracao": "J'Adore in Joy - Dior",
@@ -895,7 +962,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Sal Marinho",
     "notasCorpo": "Jasmim Sambac, Ylang Ylang, Néroli e Tuberosa",
-    "notasFundo": "Pêssego"
+    "notasFundo": "Pêssego",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/joy"
   },
   {
     "inspiracao": "Jean Paul Gautier - Classique",
@@ -908,7 +976,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Flor de Laranjeira, Anis Estrelado, Rosa, Mandarina, Pera e Bergamota",
     "notasCorpo": "Ylang Ylang, Gengibre, Orquídea, Íris, Tuberosa e Ameixa",
-    "notasFundo": "Baunilha, Âmbar, Almíscar, Canela e Sândalo"
+    "notasFundo": "Baunilha, Âmbar, Almíscar, Canela e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/classic"
   },
   {
     "inspiracao": "Jimmy Choo - Illicit",
@@ -921,7 +990,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Gengibre e Laranja Amarga",
     "notasCorpo": "Jasmim Sambac, Flor de Laranjeira e Rosa",
-    "notasFundo": "Mel, Âmbar, Caramelo, Baunilha, Sândalo e Madeira de Cashmere"
+    "notasFundo": "Mel, Âmbar, Caramelo, Baunilha, Sândalo e Madeira de Cashmere",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/happiness"
   },
   {
     "inspiracao": "Joop Homme - Joop",
@@ -934,7 +1004,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Flor de Laranjeira, Mandarina, Bergamota e Limão de Amalfi",
     "notasCorpo": "Canela, Heliotrópio, Jasmim, Cardamomo e Lírio-do-Vale",
-    "notasFundo": "Baunilha, Fava Tonka, Sândalo, Patchouli ou Oriza, Mel, Tabaco e Vetiver"
+    "notasFundo": "Baunilha, Fava Tonka, Sândalo, Patchouli ou Oriza, Mel, Tabaco e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/jump-life-homme"
   },
   {
     "inspiracao": "Kenzo World - Kenzo",
@@ -947,7 +1018,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Frutas Vermelhas",
     "notasCorpo": "Peônia, Notas Florais e Jasmim Egípcio",
-    "notasFundo": "Ambroxan"
+    "notasFundo": "Ambroxan",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/world"
   },
   {
     "inspiracao": "Kourus - Yves Saint Laurent",
@@ -960,7 +1032,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Aldeídos, Coentro, Sálvia Esclaréia, Artemísia e Bergamota",
     "notasCorpo": "Patchouli ou Oriza, Cravo, Vetiver, Canela, Gerânio, Jasmim e Raíz de Orris ou Lírio Florentino",
-    "notasFundo": "Civeta, Mel, Couro, Almíscar, Musgo de Carvalho, Âmbar, Fava Tonka e Baunilha"
+    "notasFundo": "Civeta, Mel, Couro, Almíscar, Musgo de Carvalho, Âmbar, Fava Tonka e Baunilha",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/korus"
   },
   {
     "inspiracao": "La Nuit de L'Homme - Yves Saint",
@@ -973,7 +1046,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Cardamomo",
     "notasCorpo": "Lavanda, Cedro da Virgínia e Bergamota",
-    "notasFundo": "Vetiver e Alcarávia"
+    "notasFundo": "Vetiver e Alcarávia",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/night-men"
   },
   {
     "inspiracao": "La Nuit Trésor - Lâncome",
@@ -986,7 +1060,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Pera, Tangerina e Bergamota",
     "notasCorpo": "Morango, Orquídea Baunilha, Rosa Negra e Maracujá",
-    "notasFundo": "Pralinê, Caramelo, Lichia, Baunilha, Patchouli ou Oriza, Incenso, Café, Alcaçuz, Cumarina e Papiro"
+    "notasFundo": "Pralinê, Caramelo, Lichia, Baunilha, Patchouli ou Oriza, Incenso, Café, Alcaçuz, Cumarina e Papiro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/lux%C3%BAria"
   },
   {
     "inspiracao": "La Vie Est Belle - Lâncome",
@@ -999,7 +1074,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Groselha Preta e Pera",
     "notasCorpo": "Íris, Jasmim e Flor de Laranjeira",
-    "notasFundo": "Pralinê, Baunilha, Patchouli ou Oriza e Fava Tonka"
+    "notasFundo": "Pralinê, Baunilha, Patchouli ou Oriza e Fava Tonka",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/d"
   },
   {
     "inspiracao": "Lady Million - Paco Rabanne",
@@ -1012,7 +1088,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Framboesa, Néroli e Limão de Amalfi",
     "notasCorpo": "Jasmim, Flor de Laranjeira Africana e Gardênia",
-    "notasFundo": "Mel branco, Patchouli ou Oriza e Âmbar"
+    "notasFundo": "Mel branco, Patchouli ou Oriza e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/lady-money"
   },
   {
     "inspiracao": "Laffata Fakhar Black",
@@ -1025,7 +1102,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "maçã verde, lavanda, gengibre",
     "notasCorpo": "gerânio, zimbro, sálvia",
-    "notasFundo": "fava tonka, cedro, vetiver, musk"
+    "notasFundo": "fava tonka, cedro, vetiver, musk",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/hasan-black"
   },
   {
     "inspiracao": "Laffata Yara",
@@ -1038,7 +1116,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Orquídea, Heliotrópio, Tangerina",
     "notasCorpo": "acorde gourmand, frutas tropicais",
-    "notasFundo": "baunilha, almíscar e sândalo"
+    "notasFundo": "baunilha, almíscar e sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/zaya"
   },
   {
     "inspiracao": "Le Male - Jean Paul Galtier",
@@ -1051,7 +1130,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Lavanda, Hortelã, Cardamomo, Bergamota e Artemísia",
     "notasCorpo": "Canela, Flor de Laranjeira e Alcarávia",
-    "notasFundo": "Baunilha, Fava Tonka, Âmbar, Sândalo e Cedro"
+    "notasFundo": "Baunilha, Fava Tonka, Âmbar, Sândalo e Cedro",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/rock"
   },
   {
     "inspiracao": "LIBRE - YVES SAINT LAURENT",
@@ -1064,7 +1144,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Lavanda; Mandarina; Groselha Preta; Petitgrain",
     "notasCorpo": "Lavanda; Flor de Laranjeira; Jasmim",
-    "notasFundo": "Baunilha de Madagascar; Almíscar; Cedro; Âmbar Cinzento"
+    "notasFundo": "Baunilha de Madagascar; Almíscar; Cedro; Âmbar Cinzento",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/libert%C3%A9"
   },
   {
     "inspiracao": "Light Blue - Dolce & Gabbana",
@@ -1077,7 +1158,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Limão Siciliano, Maçã, Cedro e Câmpanula",
     "notasCorpo": "Bambú, Jasmim e Rosa Branca",
-    "notasFundo": "Cedro, Almíscar e Âmbar"
+    "notasFundo": "Cedro, Almíscar e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/elegance-blue"
   },
   {
     "inspiracao": "L'Interdit - Givenchy",
@@ -1090,7 +1172,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia e Noite",
     "notasTopo": "Pera e Bergamota",
     "notasCorpo": "Tuberosa, Flor de Laranjeira, Jasmin e Sândalo",
-    "notasFundo": "Patchouli, Baunilha, Ambroxan, Vetiver"
+    "notasFundo": "Patchouli, Baunilha, Ambroxan, Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/myst%C3%A8re"
   },
   {
     "inspiracao": "Luna - Nina Ricci",
@@ -1103,7 +1186,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Frutos Silvestres, Flor de Laranjeira, Tangerina e Lima",
     "notasCorpo": "Caramelo, Immortelle, Pera e Jasmim",
-    "notasFundo": "Baunilha de Madagascar, Alcaçuz, Sândalo e Almíscar Branco"
+    "notasFundo": "Baunilha de Madagascar, Alcaçuz, Sândalo e Almíscar Branco",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/la-lune"
   },
   {
     "inspiracao": "Luna Rossa Prada - Prada",
@@ -1116,7 +1200,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Lavanda e Laranja Amarga",
     "notasCorpo": "Hortelã e Sálvia Esclaréia",
-    "notasFundo": "Ambreta e Ambroxan"
+    "notasFundo": "Ambreta e Ambroxan",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/challenge"
   },
   {
     "inspiracao": "Marina de Bourbon Rouge Royal",
@@ -1129,7 +1214,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Morango, Groselha Preta e Lima",
     "notasCorpo": "Ylang Ylang, Jasmim e Lírio-do-Vale",
-    "notasFundo": "Musgo de Carvalho e Opoponax"
+    "notasFundo": "Musgo de Carvalho e Opoponax",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/queen"
   },
   {
     "inspiracao": "Olympeá - Paco Rabanne",
@@ -1142,7 +1228,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "asmim Aquático, Flor de Gengibre e Mandarina Verde",
     "notasCorpo": "Sal e Baunilha",
-    "notasFundo": "Âmbar Cinzento, Madeira de Cashmere e Sândalo"
+    "notasFundo": "Âmbar Cinzento, Madeira de Cashmere e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/athena"
   },
   {
     "inspiracao": "ONE MILLION LUCKY",
@@ -1155,7 +1242,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Ameixa, Toronja e Bergamota",
     "notasCorpo": "Avelã, Mel, Flor de laranjeira e Jasmin",
-    "notasFundo": "Âmbar e Notas amadeiradas"
+    "notasFundo": "Âmbar e Notas amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/fortune-lucky"
   },
   {
     "inspiracao": "Oud Wood - Tom Ford",
@@ -1168,7 +1256,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Cardamomo, Pimenta Sichuan e Madeira Rosa",
     "notasCorpo": "Madeira de Sândalo e Vetiver",
-    "notasFundo": "Âmbar e Fava Tonka"
+    "notasFundo": "Âmbar e Fava Tonka",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/mister-tom"
   },
   {
     "inspiracao": "PHANTOM - PACO RABANNE",
@@ -1181,7 +1270,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Lavanda, Raspas de Limão e Limão de Amalfi",
     "notasCorpo": "Notas metálicas e terrosas, Maçã e Patchouli",
-    "notasFundo": "Vetiver e Baunilha"
+    "notasFundo": "Vetiver e Baunilha",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/famous-for-him"
   },
   {
     "inspiracao": "Poison Girl - Dior",
@@ -1194,7 +1284,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Laranja Amarga e Limão",
     "notasCorpo": "Rosa Damascena, Rosa de Grasse e Flor de Laranjeira",
-    "notasFundo": "Baunilha, Amêndoa, Fava Tonka, Tolú Bálsamo, Sândalo, Cashmeran e Heliotrópio"
+    "notasFundo": "Baunilha, Amêndoa, Fava Tonka, Tolú Bálsamo, Sândalo, Cashmeran e Heliotrópio",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/glamour-sexy"
   },
   {
     "inspiracao": "Polo Black",
@@ -1207,7 +1298,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Manga, Sálvia e Tangerina",
     "notasCorpo": "Limão verdadeiro e Absinto",
-    "notasFundo": "Sândalo, Fava Tonka e Patchouli"
+    "notasFundo": "Sândalo, Fava Tonka e Patchouli",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/black"
   },
   {
     "inspiracao": "Polo Blue Ralph Lauren",
@@ -1220,7 +1312,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Melão, Pepino e Tangerina",
     "notasCorpo": "Manjericão, Sálvia e Gerânio",
-    "notasFundo": "Camurça,  Madeira e Almíscar"
+    "notasFundo": "Camurça,  Madeira e Almíscar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/blue"
   },
   {
     "inspiracao": "Polo Red - Rhalph Lauren",
@@ -1233,7 +1326,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Oxicoco, Toranja e Limão Italiano",
     "notasCorpo": "Açafrão e Sálvia",
-    "notasFundo": "Âmbar, Café e Notas Amadeiradas"
+    "notasFundo": "Âmbar, Café e Notas Amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/red-man"
   },
   {
     "inspiracao": "Polo Sport - Ralf Lauren",
@@ -1246,7 +1340,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Hortelã, Aldeídos, Lavanda, Bergamota, Mandarina, Limão, Artemísia e Néroli",
     "notasCorpo": "Alga marinha, Gengibre, Jasmim, Gerânio, Cyclamen, Rosa e Pau-Rosa",
-    "notasFundo": "Almíscar, Sândalo, Cedro, Madeira Guaiac e Âmbar"
+    "notasFundo": "Almíscar, Sândalo, Cedro, Madeira Guaiac e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/pole-sport"
   },
   {
     "inspiracao": "Polo Sport - Ralph Lauren",
@@ -1259,7 +1354,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Bagas de Zimbro ou Junípero, Alcarávia, Artemísia, Manjericão, Coentro e Bergamota",
     "notasCorpo": "Agulhas de Pinheiro, Couro, Camomila, Pimenta, Cravo, Gerânio, Jasmim e Rosa",
-    "notasFundo": "Tabaco, Musgo de Carvalho, Patchouli ou Oriza, Cedro, Vetiver, Almíscar e Âmbar"
+    "notasFundo": "Tabaco, Musgo de Carvalho, Patchouli ou Oriza, Cedro, Vetiver, Almíscar e Âmbar",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/apolo"
   },
   {
     "inspiracao": "Sauvage - Dior",
@@ -1272,7 +1368,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Bergamota da Calábria e Pimenta",
     "notasCorpo": "Pimenta de Szechuan, Lavanda, Pimenta Rosa, Vetiver, Patchouli ou Oriza, Gerânio e Elemi",
-    "notasFundo": "Ambroxan, Cedro e Ládano"
+    "notasFundo": "Ambroxan, Cedro e Ládano",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/amk-men"
   },
   {
     "inspiracao": "Scandal - Jean Paul Gaultier",
@@ -1285,7 +1382,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Laranja Sanguínea e Mandarina",
     "notasCorpo": "Mel, Gardênia, Flor de Laranjeira, Jasmim e Pêssego",
-    "notasFundo": "Cera de Abelha, Caramelo, Patchouli ou Oriza e Alcaçuz"
+    "notasFundo": "Cera de Abelha, Caramelo, Patchouli ou Oriza e Alcaçuz",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/escandalosa"
   },
   {
     "inspiracao": "Scandal Pour Homme - Jean Paul Gaultier",
@@ -1298,7 +1396,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Citrus, Bergamota, Grapefruit",
     "notasCorpo": "Gardênia, Lírio do Vale, Rosas",
-    "notasFundo": "Cedro, Âmbar, Almíscar, Sândalo, Bálsamo, Fava Tonka, Musgo, Baunilha, Caramelo"
+    "notasFundo": "Cedro, Âmbar, Almíscar, Sândalo, Bálsamo, Fava Tonka, Musgo, Baunilha, Caramelo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/provoque"
   },
   {
     "inspiracao": "SI - Giorgio Armani",
@@ -1311,7 +1410,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Cassis ou groselha",
     "notasCorpo": "Rosa de Maio e Frésia",
-    "notasFundo": "Baunilha, Patchouli ou Oriza, Ambroxan e Notas Amadeiradas"
+    "notasFundo": "Baunilha, Patchouli ou Oriza, Ambroxan e Notas Amadeiradas",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/voluptuous"
   },
   {
     "inspiracao": "Silver Scent - Jacques Bogart",
@@ -1324,7 +1424,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Flor de Laranjeira e Limão",
     "notasCorpo": "Lavanda, Noz-moscada, Cardamomo, Coentro, Gerânio e Alecrim",
-    "notasFundo": "Lichia, Fava Tonka, Madeira de Teca e Vetiver"
+    "notasFundo": "Lichia, Fava Tonka, Madeira de Teca e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/silver"
   },
   {
     "inspiracao": "Stronger Whith You - Armani",
@@ -1337,7 +1438,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Cardamomo, Pimenta Rosa, Folha de Violeta e Hortelã",
     "notasCorpo": "Abacaxi, Melão, Canela, Sálvia e Lavanda",
-    "notasFundo": "Baunilha, Castanha, Madeira de Âmbar, Cedro e Madeira Guaiac"
+    "notasFundo": "Baunilha, Castanha, Madeira de Âmbar, Cedro e Madeira Guaiac",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-masculinos/brave"
   },
   {
     "inspiracao": "The One - Dolce & Gabbana",
@@ -1350,7 +1452,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Pêssego, Lichia, Mandarina e Bergamota",
     "notasCorpo": "Lírio, Ameixa, Jasmim e Lírio-do-Vale",
-    "notasFundo": "Baunilha, Âmbar, Almíscar e Vetiver"
+    "notasFundo": "Baunilha, Âmbar, Almíscar e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/emo%C3%A7%C3%B5es"
   },
   {
     "inspiracao": "Tradicional - Dolce & Gabbana",
@@ -1363,7 +1466,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia ou noite",
     "notasTopo": "Aldeídos, Manjericão, Cítricos, Hera, Mandarina, Frésia e Bergamota",
     "notasCorpo": "Cravo, Cravo-de-Defunto, Coentro, Flor de Laranjeira, Lírio, Jasmim, Rosa Búlgara e Lírio-do-Vale",
-    "notasFundo": "Sândalo, Baunilha, Almíscar e Fava Tonka"
+    "notasFundo": "Sândalo, Baunilha, Almíscar e Fava Tonka",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/elegance"
   },
   {
     "inspiracao": "Tradicional - Gabriela Sabatini",
@@ -1376,7 +1480,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Aldeídos, Notas Frutadas, Bergamota, Mandarina e Limão",
     "notasCorpo": "Jasmim, Madressilva, Flor de Laranjeira, Heliotrópio, Lírio-do-Vale e Rosa",
-    "notasFundo": "Baunilha, Âmbar, Fava Tonka, Sândalo, Almíscar, Musgo de Carvalho e Patchouli ou Oriza"
+    "notasFundo": "Baunilha, Âmbar, Fava Tonka, Sândalo, Almíscar, Musgo de Carvalho e Patchouli ou Oriza",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/gabriela"
   },
   {
     "inspiracao": "Very Good Girl",
@@ -1389,7 +1494,8 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Dia",
     "notasTopo": "Lichia e Groselha Vermelha",
     "notasCorpo": "Rosa",
-    "notasFundo": "Baunilha e Vetiver"
+    "notasFundo": "Baunilha e Vetiver",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/intense-girl"
   },
   {
     "inspiracao": "Yes I am - Cacharel",
@@ -1402,6 +1508,7 @@ export const perfumes: Perfume[] = [
     "diaNoite": "Noite",
     "notasTopo": "Framboesa, Mandarina, Limão e Bergamota",
     "notasCorpo": "Gardênia, Flor de Gengibre, Âmbar, Jasmim, Rosa e Flor de Laranjeira",
-    "notasFundo": "Leite, Caramelo, Baunilha, Cardamomo, Alcaçuz, Cumarina, Benjoim, Madeira de Âmbar e Sândalo"
+    "notasFundo": "Leite, Caramelo, Baunilha, Cardamomo, Alcaçuz, Cumarina, Benjoim, Madeira de Âmbar e Sândalo",
+    "link": "https://sites.google.com/view/guiapraticoamakha/perfumaria/perfumes-femininos/be-you"
   }
 ];
