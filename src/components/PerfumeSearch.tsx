@@ -98,16 +98,24 @@ function score(query: string, perfume: Perfume): number {
   if (!q) return 0;
   const target = normalize(perfume.inspiracao);
 
+  const qTokens = q.split(" ").filter(t => t.length > 0);
+  const tTokens = target.split(" ").filter(t => t.length > 0);
+  const meaningful = qTokens.filter(t => !STOP.has(t));
+
   // Boosts diretos
   if (target === q) return 10000;
   if (target.startsWith(q + " ") || target === q) return 5000;
   if (target.includes(" " + q + " ") || target.startsWith(q)) return 3000;
-  if (q.length >= 3 && target.includes(q)) return 1500;
+
+  // Uma palavra digitada deve encontrar essa palavra em qualquer posição do nome
+  // Ex: "Girl" encontra "Very Good Girl", "Good Girl" e "Poison Girl".
+  if (meaningful.length === 1) {
+    const qt = meaningful[0];
+    if (tTokens.includes(qt)) return 2500 + Math.max(0, 80 - target.length);
+    if (qt.length >= 3 && tTokens.some(tt => tt.includes(qt) || qt.includes(tt))) return 1800;
+  }
 
   // Match por tokens com fuzzy
-  const qTokens = q.split(" ").filter(t => t.length > 0);
-  const tTokens = target.split(" ").filter(t => t.length > 0);
-
   let total = 0;
   let strongHits = 0;
   let consideredTokens = 0;
@@ -125,15 +133,14 @@ function score(query: string, perfume: Perfume): number {
 
   // Exige pelo menos 1 hit forte para queries multi-palavra significativas,
   // ou um hit razoável para query de 1 palavra
-  const meaningful = qTokens.filter(t => !STOP.has(t)).length;
-  if (meaningful >= 2 && strongHits === 0 && total < 100) {
+  if (meaningful.length >= 2 && strongHits === 0 && total < 100) {
     return 0;
   }
   if (total < 30) return 0;
 
   // Para query de 1 token, considere também todos os perfumes que contenham
   // esse token (mesmo que apareça depois no nome — ex: "girl" em "Very Good Girl")
-  if (meaningful === 1 && strongHits >= 1) {
+  if (meaningful.length === 1 && strongHits >= 1) {
     total += 50; // pequeno boost para garantir inclusão acima do limiar
   }
 
