@@ -261,7 +261,7 @@ export const PerfumeSearch = () => {
                       i === highlight ? "bg-accent/15" : "hover:bg-muted/60"
                     }`}
                   >
-                    <span className="font-display text-lg text-foreground">{p.inspiracao}</span>
+                    <span translate="no" className="font-display text-lg text-foreground">{p.inspiracao}</span>
                     <span className="text-xs uppercase tracking-widest text-gold-deep font-medium shrink-0">
                       {p.genero}
                     </span>
