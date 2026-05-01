@@ -14,7 +14,7 @@ const Index = () => {
           Pesquisa olfativa
         </div>
       </header>
-      <section className="relative z-10 px-4 sm:px-6 pt-12 md:pt-20 pb-40">
+      <section className="relative z-10 px-4 sm:px-6 pt-12 md:pt-20" style={{ minHeight: "80vh" }}>
         <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16">
           <h1 className="font-display text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-medium leading-[1.1] text-balance animate-float-up">
             Encontre sua versão{" "}
