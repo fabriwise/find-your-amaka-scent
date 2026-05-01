@@ -28,7 +28,7 @@ export const PerfumeResult = ({ perfume, onReset }: Props) => {
         <div className="flex items-end justify-between gap-6 flex-wrap">
           <div>
             <div className="text-sm text-gold-soft/80 font-light mb-2">Inspirado em</div>
-            <h3 className="font-display text-2xl md:text-3xl italic text-primary-foreground/90 mb-4">
+            <h3 className="font-display text-2xl md:text-3xl italic text-primary-foreground/90 mb-4" translate="no">
               {perfume.inspiracao}
             </h3>
             <div className="flex items-center gap-3 text-gold-soft mb-3">
@@ -42,13 +42,16 @@ export const PerfumeResult = ({ perfume, onReset }: Props) => {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-3 font-display text-5xl md:text-6xl font-semibold gold-text leading-none hover:opacity-90 transition-opacity"
               >
-                <span className="border-b-2 border-transparent group-hover:border-gold-soft/60 transition-colors">
+                <span
+                  translate="no"
+                  className="border-b-2 border-transparent group-hover:border-gold-soft/60 transition-colors"
+                >
                   {perfume.amakha}
                 </span>
                 <ExternalLink className="h-6 w-6 md:h-7 md:w-7 text-gold-soft opacity-80 group-hover:opacity-100" />
               </a>
             ) : (
-              <h2 className="font-display text-5xl md:text-6xl font-semibold gold-text leading-none">
+              <h2 translate="no" className="font-display text-5xl md:text-6xl font-semibold gold-text leading-none">
                 {perfume.amakha}
               </h2>
             )}
